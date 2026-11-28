@@ -72,14 +72,17 @@ async def process(db: Database, providers: Providers, job: dict, worker: str):
                 state["media"][media_id]["provider_job_id"] = provider_id
                 await checkpoint()
 
-            blob, mime, provider_id = await providers.image(spec, media_id, provider_checkpoint)
+            blob, mime, provider_id, model_name = await providers.image(
+                spec, media_id, provider_checkpoint
+            )
             bucket = db.s.supabase_images_bucket
             row = {
                 "prompt": spec.prompt,
                 "negative_prompt": spec.negative_prompt,
                 "effective_prompt": effective_image_prompt(spec),
-                "model_name": "tguru-server-default",
+                "model_name": model_name,
                 "provider_job_id": provider_id,
+                "generation_params": {"provider": "tguru", "base_url": db.s.img_gen_base_url},
             }
         else:
             blob, mime = await providers.audio(spec)
@@ -91,6 +94,7 @@ async def process(db: Database, providers: Providers, job: dict, worker: str):
                 "voice": db.s.openrouter_audio_voice,
                 "generation_params": {
                     "api": db.s.openrouter_audio_api,
+                    "format": "pcm16->wav" if db.s.openrouter_audio_api == "chat" else "mp3",
                     "description_sent": db.s.openrouter_audio_api == "chat"
                     or db.s.openrouter_speech_instructions,
                 },

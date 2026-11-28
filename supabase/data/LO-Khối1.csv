@@ -1,0 +1,233 @@
+LO cha,,,,,,LO con,,,LO cháu,
+Grade,Unit,Program ,General Learning Objective (General LO),Tiếng Việt,Code_General LO,"Specific Learning Objective
+(Specific LO)",Code_Specific LO,Phân loại Specific LO,"Learning Objective Items
+(LO items)",Code_LO items
+1,1,,In the school playground,Ở sân chơi của trường,,Từ vựng chứa âm Bb,,Từ vựng,ball,
+1,1,,In the school playground,Ở sân chơi của trường,,Từ vựng chứa âm Bb,,Từ vựng,bike ,
+1,1,,In the school playground,Ở sân chơi của trường,,Từ vựng chứa âm Bb,,Từ vựng,book,
+1,1,,In the school playground,Ở sân chơi của trường,,Câu chào hỏi và tạm biệt,,Ngữ pháp,"Pattern: Hi, I’m + [name]
+Constraint: common names (Bill, Ba, Nam, Lan...)",
+1,1,,In the school playground,Ở sân chơi của trường,,Câu chào hỏi và tạm biệt,,Ngữ pháp,"Pattern: Bye, + [name]
+Constraint:
+- names: common names (Bill, Ba, Nam, Lan...)",
+1,2,,In the dining room,Trong phòng ăn,,Từ vựng chứa âm Cc,,Từ vựng,cake,
+1,2,,In the dining room,Trong phòng ăn,,Từ vựng chứa âm Cc,,Từ vựng,car,
+1,2,,In the dining room,Trong phòng ăn,,Từ vựng chứa âm Cc,,Từ vựng,cat,
+1,2,,In the dining room,Trong phòng ăn,,Từ vựng chứa âm Cc,,Từ vựng,cup,
+1,2,,In the dining room,Trong phòng ăn,,Câu nói mình có gì,,Ngữ pháp,"Pattern: I have a + [noun]
+Constraint: singular, countable, familiar objects (car, cat, cup, cake, book, ball, bike,...)",
+1,3,,At the street market,Ở chợ đường phố,,Từ vựng chứa âm Aa,,Từ vựng,apple,
+1,3,,At the street market,Ở chợ đường phố,,Từ vựng chứa âm Aa,,Từ vựng,bag,
+1,3,,At the street market,Ở chợ đường phố,,Từ vựng chứa âm Aa,,Từ vựng,can,
+1,3,,At the street market,Ở chợ đường phố,,Từ vựng chứa âm Aa,,Từ vựng,hat,
+1,3,,At the street market,Ở chợ đường phố,,Câu giới thiệu đồ vật của mình,,Ngữ pháp,"Pattern: This is my + [noun]
+Constraint: singular, countable, personal belongings (apple, bag, can, hat, book, pen...)",
+1,3,,At the street market,Ở chợ đường phố,,Câu giới thiệu đồ vật ,,Ngữ pháp,"Pattern: There is (There’s) + a/an + [noun]
+Constraint: singular, countable nouns (apple, cat, book, elephant...)
+Rule:
+- ""a"" + consonant sound (a dog, a cat)
+- ""an"" + vowel sound (an apple, an egg)",
+1,4,,In the bedroom,Trong phòng ngủ,,Từ vựng chứa âm Dd,,Từ vựng,desk,
+1,4,,In the bedroom,Trong phòng ngủ,,Từ vựng chứa âm Dd,,Từ vựng,dog,
+1,4,,In the bedroom,Trong phòng ngủ,,Từ vựng chứa âm Dd,,Từ vựng,door,
+1,4,,In the bedroom,Trong phòng ngủ,,Từ vựng chứa âm Dd,,Từ vựng,duck,
+1,4,,In the bedroom,Trong phòng ngủ,,Câu giới thiệu về vật,,Ngữ pháp,"Pattern: This is + a/an + [noun]
+Constraint: singular, countable nouns (dog, cat, book, apple...)
+Rule:
+- ""a"" + consonant sound (a dog, a cat)
+- ""an"" + vowel sound (an apple, an egg)",
+1,4,,In the bedroom,Trong phòng ngủ,,Câu chỉ vị trí đồ vật,,Ngữ pháp,"Pattern: It is (It’s) + on + the + [noun]
+Constraint: 
+- nouns: objects with a surface (desk, table, chair, shelf, board...)",
+1,4,,In the bedroom,Trong phòng ngủ,,Câu chỉ vị trí đồ vật,,Ngữ pháp,"Pattern: It is (It’s) + near + the + [noun]
+Constraint: 
+- nouns: familiar classroom objects (desk, table, chair, door, window...)",
+1,5,,At the fish and chip shop,Ở cửa hàng cá chiên và khoai tây chiên,,Từ vựng về đồ ăn (âm Ii),,Từ vựng,chicken,
+1,5,,At the fish and chip shop,Ở cửa hàng cá chiên và khoai tây chiên,,Từ vựng về đồ ăn (âm Ii),,Từ vựng,chips,
+1,5,,At the fish and chip shop,Ở cửa hàng cá chiên và khoai tây chiên,,Từ vựng về đồ ăn (âm Ii),,Từ vựng,fish,
+1,5,,At the fish and chip shop,Ở cửa hàng cá chiên và khoai tây chiên,,Từ vựng về đồ ăn (âm Ii),,Từ vựng,milk,
+1,5,,At the fish and chip shop,Ở cửa hàng cá chiên và khoai tây chiên,,Câu nói về sở thích của mình,,Ngữ pháp,"Pattern: I like + [noun]
+Constraint:
+- nouns: food/drinks (milk, chicken, rice, juice...)",
+1,5,,At the fish and chip shop,Ở cửa hàng cá chiên và khoai tây chiên,,Câu nói về sở thích của mình,,Ngữ pháp,"Pattern: I like + [noun] and + [noun]
+Constraint: same semantic group (food/drinks)",
+1,6,,In the classroom,Trong lớp học,,Từ vựng chứa âm Ee,,Từ vựng,bell,
+1,6,,In the classroom,Trong lớp học,,Từ vựng chứa âm Ee,,Từ vựng,pen,
+1,6,,In the classroom,Trong lớp học,,Từ vựng chứa âm Ee,,Từ vựng,pencil,
+1,6,,In the classroom,Trong lớp học,,Từ vựng chứa âm Ee,,Từ vựng,red,
+1,6,,In the classroom,Trong lớp học,,Câu nói về màu sắc của đồ vật,,Ngữ pháp,"Pattern: It is (It’s) + a/an + [adjective] + [noun]
+Constraint:
+- nouns: singular, countable (pen, book, bag...)
+- adjectives: basic colors (red, blue, green...)",
+1,7,,In the garden,Trong vườn,,Từ vựng chứa âm Gg,,Từ vựng,garden,
+1,7,,In the garden,Trong vườn,,Từ vựng chứa âm Gg,,Từ vựng,gate,
+1,7,,In the garden,Trong vườn,,Từ vựng chứa âm Gg,,Từ vựng,girl,
+1,7,,In the garden,Trong vườn,,Từ vựng chứa âm Gg,,Từ vựng,goat,
+1,7,,In the garden,Trong vườn,,Câu nói về sự vật xung quanh,,Ngữ pháp,"Pattern: There is (There’s) + a/an + [noun]
+Constraint: nouns: singular, countable (garden, gate, girl, goat, park, tree, house, ...)",
+1,7,,In the garden,Trong vườn,,Cụm từ nói về vị trí của sự vật,,Ngữ pháp,"Pattern: a + [noun] + in the + [place]
+Constraint:
+- noun: singular, countable (girl, goat, boy...)
+- place: common places (garden, park, house...)",
+1,8,,In the park,Trong công viên,,Từ vựng chứa âm Hh,,Từ vựng,hair,
+1,8,,In the park,Trong công viên,,Từ vựng chứa âm Hh,,Từ vựng,hand,
+1,8,,In the park,Trong công viên,,Từ vựng chứa âm Hh,,Từ vựng,head,
+1,8,,In the park,Trong công viên,,Từ vựng chứa âm Hh,,Từ vựng,horse,
+1,8,,In the park,Trong công viên,,Câu mệnh lệnh đơn giản,,Ngữ pháp,"Pattern: touch + your + [body part]
+Constraint:
+- verb: touch (only)
+- body part: hair, head, hand, face",
+1,8,,In the park,Trong công viên,,Cụm từ chỉ sự sở hữu ,,Ngữ pháp,"Pattern: [person name]’s + [body part]
+Constraint:
+- person name: proper nouns (Hoa, Nam, Bill)
+- body part: human body parts (hair, head, hand, face)
+- exclude: objects, places",
+1,9,,In the shop,Trong cửa hàng,,Từ vựng chứa âm Oo,,Từ vựng,clocks,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng chứa âm Oo,,Từ vựng,locks,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng chứa âm Oo,,Từ vựng,mops,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng chứa âm Oo,,Từ vựng,pots,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng số 1-10,,Từ vựng,one,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng số 1-10,,Từ vựng,two,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng số 1-10,,Từ vựng,three,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng số 1-10,,Từ vựng,four,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng số 1-10,,Từ vựng,five,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng số 1-10,,Từ vựng,six,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng số 1-10,,Từ vựng,seven,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng số 1-10,,Từ vựng,eight,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng số 1-10,,Từ vựng,nine,
+1,9,,In the shop,Trong cửa hàng,,Từ vựng số 1-10,,Từ vựng,ten,
+1,9,,In the shop,Trong cửa hàng,,Câu hỏi và trả lời số lượng (cơ bản),,Ngữ pháp,"Pattern:
+Q: How many + [plural noun]?
+A: [number]
+
+Link: A answers Q
+
+Constraint:
+- plural nouns only (clocks, locks, mops, pots)
+- number range: 1–5",
+1,9,,In the shop,Trong cửa hàng,,Câu hỏi và trả lời số lượng (cơ bản),,Ngữ pháp,"Pattern:
+Q: How many + [plural noun]?
+A: There are + [number] + [plural noun]
+
+Link: A answers Q
+
+Constraint:
+- plural nouns only  (clocks, locks, mops, pots)
+- number range: 1–5",
+1,9,,In the shop,Trong cửa hàng,,Nói về số lượng của đồ vật,,Ngữ pháp,"Pattern: There are + [number] + [plural noun]
+
+Constraint:
+- numbers: basic numbers (two, three, four, five)
+- nouns: regular plural nouns (add -s) (locks, clocks, mops, pots)",
+1,9,,In the shop,Trong cửa hàng,,Nói về số lượng của đồ vật,,Ngữ pháp,"Pattern: [number] + [plural noun]
+
+Constraint:
+- numbers: two, three, four, five
+- nouns: regular plural nouns (add -s)
+- noun type: simple objects/animals (monkeys, clocks, locks, pots)",
+1,10,,At the zoo,Ở sở thú,,Từ vựng chứa âm Mm,,Từ vựng,mango,
+1,10,,At the zoo,Ở sở thú,,Từ vựng chứa âm Mm,,Từ vựng,monkey,
+1,10,,At the zoo,Ở sở thú,,Từ vựng chứa âm Mm,,Từ vựng,mother,
+1,10,,At the zoo,Ở sở thú,,Từ vựng chứa âm Mm,,Từ vựng,mouse,
+1,10,,At the zoo,Ở sở thú,,Câu chỉ định với đồ vật (That’s…),,Ngữ pháp,"Pattern: That is (That’s) + a/an + [singular countable noun]
+
+Constraint:
+- nouns: basic nouns (animals, objects, food)
+- examples: monkey, mango, mouse",
+1,10,,At the zoo,Ở sở thú,,Câu chỉ định với con người (That’s…),,Ngữ pháp,"Pattern: That is (That’s) + my + [noun]
+
+Constraint:
+- noun: people (family members: mother, father, sister, brother...)",
+1,11,,At the bus stop,Ở trạm xe buýt,,Từ vựng chứa âm Uu,,Từ vựng,bus,
+1,11,,At the bus stop,Ở trạm xe buýt,,Từ vựng chứa âm Uu,,Từ vựng,run,
+1,11,,At the bus stop,Ở trạm xe buýt,,Từ vựng chứa âm Uu,,Từ vựng,sun,
+1,11,,At the bus stop,Ở trạm xe buýt,,Từ vựng chứa âm Uu,,Từ vựng,truck,
+1,11,,At the bus stop,Ở trạm xe buýt,,Từ vựng chỉ hoạt động,,Từ vựng,running,
+1,11,,At the bus stop,Ở trạm xe buýt,,Từ vựng chỉ hoạt động,,Từ vựng,moving,
+1,11,,At the bus stop,Ở trạm xe buýt,,Câu nói hành động đang diễn ra,,Ngữ pháp,"Pattern: [singular subject] + is (’s) + [verb-ing]
+
+Constraint:
+- subjects: he, she, it, the boy, the truck, the bus
+- verbs: running, moving
+- verb type: action verbs",
+1,12,,At the lake,Ở hồ,,Từ vựng chứa âm Ll,,Từ vựng,lake,
+1,12,,At the lake,Ở hồ,,Từ vựng chứa âm Ll,,Từ vựng,leaf,
+1,12,,At the lake,Ở hồ,,Từ vựng chứa âm Ll,,Từ vựng,lemons,
+1,12,,At the lake,Ở hồ,,Câu yêu cầu sự chú ý (Look at ...),,Ngữ pháp,"Pattern: look at + the + [object noun]
+
+Constraint:
+- verb: look at (fixed)
+- noun: objects/nature (lemons, leaf, lake)
+- determiner: required (""the"")",
+1,12,,At the lake,Ở hồ,,Câu yêu cầu sự chú ý (Look at ...),,Ngữ pháp,"Pattern: look at + [person name]
+
+Constraint:
+- verb: look at (fixed)
+- noun: proper names (Lucy, Bill, Nam)
+- no determiner (""the"" not used)",
+1,13,,In the school canteen,Trong căng tin trường học,,Từ vựng chứa âm Nn,,Từ vựng,bananas,
+1,13,,In the school canteen,Trong căng tin trường học,,Từ vựng chứa âm Nn,,Từ vựng,noodles,
+1,13,,In the school canteen,Trong căng tin trường học,,Từ vựng chứa âm Nn,,Từ vựng,nuts,
+1,13,,In the school canteen,Trong căng tin trường học,,Câu nói về hành động đang ăn,,Ngữ pháp,"Pattern: [singular subject] + is (’s) + having + [food noun]
+
+Constraint:
+- subject:
+  + pronouns (she, he)
+  + proper names (Nam, Nick,..)
+- verb: having (fixed)
+- noun: food (noodles, nuts, bananas)",
+1,14,,In the toy shop,Trong cửa hàng đồ chơi,,Từ vựng chứa âm Tt,,Từ vựng,teddy bear,
+1,14,,In the toy shop,Trong cửa hàng đồ chơi,,Từ vựng chứa âm Tt,,Từ vựng,tiger,
+1,14,,In the toy shop,Trong cửa hàng đồ chơi,,Từ vựng chứa âm Tt,,Từ vựng,top,
+1,14,,In the toy shop,Trong cửa hàng đồ chơi,,Từ vựng chứa âm Tt,,Từ vựng,turtle,
+1,14,,In the toy shop,Trong cửa hàng đồ chơi,,Câu nói về tôi nhìn thấy gì,,Ngữ pháp,"Pattern: I can see + a/an + [singular noun]
+
+Constraint:
+- subject: I
+- modal: can (fixed)
+- verb: see (fixed)
+- noun: singular, countable (animals, toys)
+- example: tiger, teddy bear, turtle, top ",
+1,14,,In the toy shop,Trong cửa hàng đồ chơi,,Câu nói chỉ sự sở hữu,,Ngữ pháp,"Pattern: [name] + has + a/an + [singular noun]
+
+Constraint:
+- subject: singular proper name (Tony, Nam, Bill...)
+- verb: has (fixed)
+- noun: singular, countable (toys, animals)",
+1,15,,At the football match,Ở trận bóng đá,,Từ vựng chứa âm Ff,,Từ vựng,face,
+1,15,,At the football match,Ở trận bóng đá,,Từ vựng chứa âm Ff,,Từ vựng,father,
+1,15,,At the football match,Ở trận bóng đá,,Từ vựng chứa âm Ff,,Từ vựng,foot,
+1,15,,At the football match,Ở trận bóng đá,,Từ vựng chứa âm Ff,,Từ vựng,football,
+1,15,,At the football match,Ở trận bóng đá,,Câu mệnh lệnh với bộ phận cơ thể,,Ngữ pháp,"Pattern: point to + your + [body part]
+
+Constraint:
+- verb: point to (fixed, không tách ""point"")
+- body part: hand, foot, head, hair
+- possessive: your (fixed)",
+1,16,,At home,Ở nhà,,Từ vựng chứa âm Ww,,Từ vựng,washing,
+1,16,,At home,Ở nhà,,Từ vựng chứa âm Ww,,Từ vựng,water,
+1,16,,At home,Ở nhà,,Từ vựng chứa âm Ww,,Từ vựng,window,
+1,16,,At home,Ở nhà,,Câu hỏi và trả lời số lượng (nâng cao),,Ngữ pháp,"Pattern: 
+Q: How many + [plural noun] + can you see?
+A: I can see + [number]
+
+Link: A answers Q
+
+Constraint:
+- plural nouns only (windows, books, doors)
+- number range: 1–10
+- fixed chunk: ""can you see""
+- answer form: short answer (no noun repetition)",
+1,16,,At home,Ở nhà,,Câu hỏi và trả lời số lượng (nâng cao),,Ngữ pháp,"Pattern:
+Q: How many + [plural noun] + can you see?
+A: I can see + [number] + [noun]
+
+Link: A answers Q
+
+Constraint:
+- question noun: plural form only (windows, books, doors)
+- answer noun:
+  + singular when number = 1
+  + plural when number > 1
+- number range: 1–10
+- fixed chunk: ""can you see""",

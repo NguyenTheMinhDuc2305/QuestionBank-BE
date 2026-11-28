@@ -53,18 +53,6 @@ class Database:
     async def rpc(self, name, body):
         return await self.request("POST", f"/rest/v1/rpc/{name}", json=body)
 
-    async def user(self, token: str):
-        r = await self.client.get(
-            self.base + "/auth/v1/user",
-            headers={
-                "apikey": self.s.supabase_secret_key.get_secret_value(),
-                "Authorization": f"Bearer {token}",
-            },
-        )
-        if r.is_error:
-            return None
-        return r.json()
-
     async def upload(self, bucket: str, key: str, data: bytes, mime: str):
         r = await self.client.post(
             self.base + f"/storage/v1/object/{quote(bucket, safe='')}/{quote(key, safe='/')}",

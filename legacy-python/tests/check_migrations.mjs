@@ -7,15 +7,14 @@ const { PGlite } = await import(pathToFileURL(process.env.PGLITE_MODULE).href);
 const db = new PGlite();
 await db.exec(`create role anon; create role authenticated; create role service_role bypassrls;
 create schema auth; create table auth.users(id uuid primary key);`);
-for (const name of ['001_initial.sql','002_persistence.sql']) {
-  const sql = await readFile(new URL('../migrations/'+name, import.meta.url), 'utf8');
+for (const name of ['001_initial.sql','002_persistence.sql','003_no_auth.sql']) {
+  const sql = await readFile(new URL('../../supabase/migrations/'+name, import.meta.url), 'utf8');
   await db.exec(sql);
   console.log('Migration OK:', name);
 }
-const owner='11111111-1111-4111-8111-111111111111';
+const owner='00000000-0000-0000-0000-000000000000';
 const key='22222222-2222-4222-8222-222222222222';
 const worker='33333333-3333-4333-8333-333333333333';
-await db.query('insert into auth.users values($1)',[owner]);
 await db.exec('set role service_role');
 const lo=(await db.query(`insert into public.learning_objectives(code,grade,unit,general_name,specific_name,category,content) values('TEST',1,1,'School','Vocabulary','vocab','pen') returning id`)).rows[0].id;
 const config={lo_id:lo,count:1,question_type:'COMP_SEL',bloom_level:1};

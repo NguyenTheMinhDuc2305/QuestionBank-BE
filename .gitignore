@@ -1,8 +1,23 @@
+# ---- Secrets / local config (keys live in ../.env, outside every repo) ----
 .env
 .env.*
 !.env.example
+!.env.test
+.dev.vars*
+.secrets*.json
+
+# ---- Worker (Node / Cloudflare) ----
+node_modules/
+dist/
+.cloudflare/
+.wrangler/
+*.log
+
+# ---- legacy-python ----
 .venv/
 __pycache__/
 .pytest_cache/
 .ruff_cache/
 *.pyc
+
+.DS_Store

@@ -7,7 +7,7 @@ import pytest
 from pydantic import ValidationError
 
 from app.config import Settings
-from app.providers import ProviderError, Providers, effective_image_prompt
+from app.providers import ProviderError, Providers, effective_image_prompt, pcm16_to_wav
 from app.schemas import (
     AudioSpec,
     Completion,
@@ -125,14 +125,16 @@ def test_no_unrequested_media():
         validate_batch(DraftBatch.model_validate({"questions": [raw]}), req)
 
 
-async def test_stream_audio_concatenates_base64():
-    wav = b"RIFF\x00\x00\x00\x00WAVEpayload"
-    encoded = base64.b64encode(wav).decode()
-    chunks = [encoded[:7], encoded[7:]]
+async def test_stream_audio_pcm16_chunks_wrapped_as_wav():
+    pcm_parts = [b"\x01\x00\x02\x00", b"\x03\x00"]
+    # Each SSE chunk is independently base64-encoded (with its own padding).
+    chunks = [base64.b64encode(p).decode() for p in pcm_parts]
 
     async def handler(request):
         assert request.headers["Authorization"] == "Bearer test"
-        assert json.loads(request.content)["stream"] is True
+        body = json.loads(request.content)
+        assert body["stream"] is True
+        assert body["audio"]["format"] == "pcm16"
         events = [
             "data: " + json.dumps({"choices": [{"delta": {"audio": {"data": c}}}]}) for c in chunks
         ]
@@ -141,7 +143,21 @@ async def test_stream_audio_concatenates_base64():
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
         provider = Providers(settings(openrouter_api_key="test"), client)
         data, mime = await provider.audio(AudioSpec(transcript="hello"))
-    assert data == wav and mime == "audio/wav"
+    assert mime == "audio/wav"
+    assert data == pcm16_to_wav(b"".join(pcm_parts), 24000)
+    assert data[:4] == b"RIFF" and data[8:12] == b"WAVE" and data[44:] == b"".join(pcm_parts)
+    assert int.from_bytes(data[24:28], "little") == 24000
+
+
+async def test_stream_audio_rejects_incomplete_stream():
+    async def handler(request):
+        event = {"choices": [{"delta": {"audio": {"data": base64.b64encode(b"ab").decode()}}}]}
+        return httpx.Response(200, text="data: " + json.dumps(event) + "\n\n")
+
+    async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
+        provider = Providers(settings(openrouter_api_key="test"), client)
+        with pytest.raises(ProviderError, match="Incomplete"):
+            await provider.audio(AudioSpec(transcript="hello"))
 
 
 async def test_image_uses_job_and_same_origin_download():
@@ -156,7 +172,12 @@ async def test_image_uses_job_and_same_origin_download():
             return httpx.Response(202, json={"job_id": "job1"})
         if "/jobs/" in request.url.path:
             return httpx.Response(
-                200, json={"status": "succeeded", "image_url": "/v1/images/a.png"}
+                200,
+                json={
+                    "status": "succeeded",
+                    "image_url": "/v1/images/a.png",
+                    "params": {"model": "qwen-image"},
+                },
             )
         return httpx.Response(200, content=b"\x89PNG\r\n\x1a\nfake")
 
@@ -166,10 +187,11 @@ async def test_image_uses_job_and_same_origin_download():
         recorded.append(job_id)
 
     async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
-        data, mime, job = await Providers(settings(), client).image(
+        data, mime, job, model = await Providers(settings(), client).image(
             ImageSpec(prompt="cat", negative_prompt="text"), "key", checkpoint
         )
     assert recorded == ["job1"] and mime == "image/png"
+    assert model == "tguru:qwen-image"
     assert len(seen) == 3
 
 

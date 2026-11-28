@@ -12,7 +12,6 @@ class Settings(BaseSettings):
     supabase_secret_key: SecretStr
     supabase_images_bucket: str = "question-images"
     supabase_audios_bucket: str = "question-audios"
-    admin_emails: list[str] = Field(default_factory=list)
     cors_origins: list[str] = Field(default_factory=lambda: ["http://localhost:3000"])
     openrouter_api_key: SecretStr = SecretStr("")
     openrouter_text_model: str = ""
@@ -20,12 +19,14 @@ class Settings(BaseSettings):
     openrouter_audio_voice: str = ""
     openrouter_audio_api: Literal["chat", "speech"] = "chat"
     openrouter_speech_instructions: bool = False
+    # Sample rate of the raw pcm16 stream returned by chat audio models (OpenAI: 24 kHz).
+    openrouter_audio_sample_rate: int = Field(default=24000, ge=8000, le=48000)
     img_gen_api_key: SecretStr = SecretStr("")
     img_gen_base_url: str = "https://genimg.tguru.vn:8000"
     image_poll_seconds: float = Field(default=3, gt=0)
     image_timeout_seconds: int = Field(default=600, ge=10)
     max_media_bytes: int = Field(default=20 * 1024 * 1024, ge=1024)
-    max_active_jobs_per_user: int = Field(default=3, ge=1, le=20)
+    max_active_jobs: int = Field(default=3, ge=1, le=20)
     worker_poll_seconds: float = Field(default=3, gt=0)
     worker_lease_seconds: int = Field(default=180, ge=60)
 

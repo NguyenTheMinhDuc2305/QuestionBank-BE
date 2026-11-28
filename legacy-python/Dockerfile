@@ -5,7 +5,6 @@ COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-dev
 COPY app ./app
 COPY scripts ./scripts
-COPY migrations ./migrations
 RUN useradd --create-home appuser && chown -R appuser:appuser /app
 USER appuser
 ENV PATH="/app/.venv/bin:$PATH"

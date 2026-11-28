@@ -75,6 +75,7 @@ class DB:
             openrouter_audio_model="test",
             openrouter_audio_voice="test",
             openrouter_audio_api="chat",
+            img_gen_base_url="https://img.test",
             openrouter_speech_instructions=False,
         )
         self.tables = {"learning_objectives": [{"content": "test"}]}
@@ -111,7 +112,7 @@ class Provider:
     async def image(self, spec, key, checkpoint):
         self.calls += 1
         await checkpoint("provider-job")
-        return b"image", "image/png", "provider-job"
+        return b"image", "image/png", "provider-job", "tguru-server-default"
 
     async def audio(self, spec):
         self.calls += 1
